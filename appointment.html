@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./src/assests/logo.png">
     <title>Appointment | Medtik</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="./src/style.css">
 </head>
 
@@ -21,10 +22,12 @@
             <a href="doctors.html" class="navlinks" id="doctorsLink">Doctors</a>
             <a href="services.html" class="navlinks" id="servicesLink">Services</a>
             <a href="contact.html" class="navlinks" id="contactLink">Contact</a>
-            <a href="login.html" class="navlinks" id="loginLink">Login</a>
-
+            <div class="nav-button">
+                <a href="login.html" class="login-btn" id="loginLink">Login</a>
+                <a href="appointment.html" class="nav-btn" id="navAppointment">Book Appointment</a>
+            </div>
         </nav>
-        <a href="appointment.html" class="nav-btn" id="navappointment">Book Appointment</a>
+
         <button class="menu-btn" id="menuBtn">
             ☰
         </button>
@@ -48,15 +51,19 @@
                 </div>
                 <div class="form-group">
                     <label for="patientPhone">Phone Number</label>
-                    <input type="number" id="patientPhone" placeholder="Enter Your Phone Number">
+                    <input type="number" id="patientPhone" placeholder="Enter Your Phone Number" required>
                 </div>
                 <div class="form-group">
                     <label for="selectDoctor">Select Doctor</label>
                     <select id="selectDoctor">
-                        <option>Choose Doctor</option>
+                        <option value="">Choose Doctor</option>
                         <option>Dr. Ayesha Siddiqui</option>
                         <option>Dr. Ahmed Khan</option>
                         <option>Dr. Fatima Noor</option>
+                        <option>Dr. Sara Ahmed</option>
+                        <option>Dr. Usman Malik</option>
+                        <option>Dr. Bilal Hussain</option>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -66,7 +73,9 @@
                         <option>Cardiology</option>
                         <option>Neurology</option>
                         <option>Dentistry</option>
-                        <option>General Medicine</option>
+                        <option>Pediatrics</option>
+                        <option>Gynecology</option>
+                        <option>Dermatology</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -83,11 +92,27 @@
                 </div>
                 <button type="submit" class="primary-btn" id="BookAppointmentBtn">Book Appointment →</button>
             </form>
+            <p id="formMessage"></p>
             <p class="appointment-note">
                 Our team will contact you to confirm your appointment.
             </p>
         </div>
     </section>
+
+    <div class="confirmation-box" id="confirmationBox">
+        <div class="confirmation-content">
+        <h3>&#10003; Appointment Confirmed!</h3>
+        <p id="confirmedName"></p>
+        <p id="confirmedPhone"></p>
+        <p id="confirmedDoctor"></p>
+        <p id="confirmedDepartment"></p>
+        <p id="confirmedDate"></p>
+        <p id="confirmedTime"></p>
+        <p id="confirmedHealth"></p>
+
+        <button type="button" id="closeConfirmation">Close</button>
+        </div>
+    </div>
     <!-- =====APPOINTMENT SECTION END===== -->
 
     <!-- =====FOOTER SECTION START====== -->
@@ -111,6 +136,8 @@
                 <a href="services.html">Neurology</a>
                 <a href="services.html">Dentistry</a>
                 <a href="services.html">Pediatrics</a>
+                <a href="services.html">Gynecology</a>
+                <a href="services.html">Dermatology</a>
             </div>
             <div class="footer-contact">
                 <h3>Contact Us</h3>
@@ -124,6 +151,14 @@
         </div>
     </footer>
     <!-- =====FOOTER SECTION END===== -->
+
+    <!-- ======BACK TO TOP BUTTON START====== -->
+    <button id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- ======BACK TO TOP BUTTON END====== -->
+    <!-- =====JAVASCRIPT LINK===== -->
+    <script src="./src/main.js"></script>
 </body>
 
 </html>

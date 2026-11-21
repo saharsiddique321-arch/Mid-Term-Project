@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./src/assests/logo.png">
     <title>Contact | Medtik</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="./src/style.css">
 </head>
 
@@ -21,10 +24,12 @@
             <a href="doctors.html" class="navlinks" id="doctorsLink">Doctors</a>
             <a href="services.html" class="navlinks" id="servicesLink">Services</a>
             <a href="contact.html" class="navlinks" id="contactLink">Contact</a>
-            <a href="login.html" class="navlinks" id="loginLink">Login</a>
-
+            <div class="nav-button">
+                <a href="login.html" class="login-btn" id="loginLink">Login</a>
+                <a href="appointment.html" class="nav-btn" id="navappointment">Book Appointment</a>
+            </div>
         </nav>
-        <a href="appointment.html" class="nav-btn" id="navappointment">Book Appointment</a>
+
         <button class="menu-btn" id="menuBtn">
             ☰
         </button>
@@ -36,18 +41,36 @@
 
         <section class="main-section" id="contactSection">
 
-            <!-- =====Location===== -->
+            <!-- =====LOCATION===== -->
             <div class="location-box" id="locationBox">
                 <h3>Karachi, Pakistan</h3>
                 <p>Visit us for trusted healthcare services.</p>
             </div>
-
-            <!-- Contact Button -->
+            <!-- =====CONTACT INFO=====  -->
+            <div class="contact-info" id="contactInfo">
+                <h2>Get In Touch</h2>
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>info@medtik.com</p>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <h3>Call Us</h3>
+                    <p>+92 00 1234567</p>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <h3>Support Hours</h3>
+                    <p>Monday - Saturday</p>
+                </div>
+            </div>
+            <!-- =====CONTACT BUTTON===== -->
             <a href="mailto:info@medtik.com" class="contact-btn" id="contactBtn">
                 Contact Us
             </a>
 
-            <!-- =====Newsletter===== -->
+            <!-- =====NEWSLETTER===== -->
             <div class="newsletter-section" id="newsletterSection">
 
                 <h2 class="newsletter-title">
@@ -66,7 +89,7 @@
                         required>
 
                     <button type="submit" class="subscribe-btn">
-                        Subscribe
+                        Stay Updated
                     </button>
 
                     <p class="privacy-note">
@@ -87,39 +110,44 @@
 
                 <div class="social-bar-wrapper">
 
-                    <!-- =====WhatsApp===== -->
-                    <a href="https://wa.me/" target="_blank" class="whatsapp-badge" aria-label="WhatsApp">
-
-                        <svg viewBox="0 0 448 512" width="34" height="34" fill="currentColor">
-                            <path
-                                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z" />
-                        </svg>
-
-                    </a>
-
-                    <!--===== Social Icons===== -->
                     <div class="social-icons">
 
-                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/" target="_blank" class="whatsapp-badge" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
 
-                        <a href="#" aria-label="X">X</a>
+                        <!-- Social Icons -->
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
 
-                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="X">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
 
-                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
 
-                        <a href="#" aria-label="YouTube">YouTube</a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
 
                     </div>
 
                 </div>
+
 
             </div>
 
         </section>
 
     </div>
-    ```
     <!-- =====CONTACT SECTION END===== -->
 
     <!-- =====FOOTER SECTION START====== -->
@@ -143,6 +171,8 @@
                 <a href="services.html">Neurology</a>
                 <a href="services.html">Dentistry</a>
                 <a href="services.html">Pediatrics</a>
+                <a href="services.html">Gynecology</a>
+                <a href="services.html">Dermatology</a>
             </div>
             <div class="footer-contact">
                 <h3>Contact Us</h3>
@@ -156,6 +186,15 @@
         </div>
     </footer>
     <!-- =====FOOTER SECTION END===== -->
+
+
+    <!-- ======BACK TO TOP BUTTON START====== -->
+    <button id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- ======BACK TO TOP BUTTON END====== -->
+    <!-- =====JAVASCRIPT LINK===== -->
+    <script src="./src/main.js"></script>
 </body>
 
 </html>

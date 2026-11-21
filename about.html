@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./src/assests/logo.png">
     <title>Our About | Medtik</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <link rel="stylesheet" href="./src/style.css">
 </head>
 
@@ -21,9 +23,12 @@
             <a href="doctors.html" class="navlinks" id="doctorsLink">Doctors</a>
             <a href="services.html" class="navlinks" id="servicesLink">Services</a>
             <a href="contact.html" class="navlinks" id="contactLink">Contact</a>
-            <a href="login.html" class="navlinks" id="loginLink">Login</a>
+            <div class="nav-button">
+                <a href="login.html" class="login-btn" id="loginLink">Login</a>
+                <a href="appointment.html" class="nav-btn" id="navappointment">Book Appointment</a>
+            </div>
         </nav>
-        <a href="appointment.html" class="nav-btn" id="navappointment">Book Appointment</a>
+
         <button class="menu-btn" id="menuBtn">
             ☰
         </button>
@@ -48,64 +53,64 @@
 
         </div>
     </section>
-<!-- =====STORY SECTION START===== -->
- <section class="our-story" id="ourStory">
-    <div class="story-image" id="storyImage">
-        <img src="./src/assests/image-6.jpg" alt="image-6">
-    </div>
-    <div class="story-content" id="storyContent">
-         <span>OUR STORY</span>
-        <h2>Caring For Every Family</h2>
-        <p>
-            Medtik is dedicated to providing trusted and
-            quality healthcare. We believe every person
-            deserves professional medical attention.
-        </p>
-        <div class="story-box">
-            <h3>Our Mission</h3>
-            <p>To make quality healthcare accessible to everyone.</p>
+    <!-- =====STORY SECTION START===== -->
+    <section class="our-story" id="ourStory">
+        <div class="story-image" id="storyImage">
+            <img src="./src/assests/image-6.jpg" alt="image-6">
         </div>
-        <div class="story-box">
-            <h3>Our Vision</h3>
-            <p>To create a healthier and happier community.</p>
+        <div class="story-content" id="storyContent">
+            <span>OUR STORY</span>
+            <h2>Caring For Every Family</h2>
+            <p>
+                Medtik is dedicated to providing trusted and
+                quality healthcare. We believe every person
+                deserves professional medical attention.
+            </p>
+            <div class="story-box">
+                <h3>Our Mission</h3>
+                <p>To make quality healthcare accessible to everyone.</p>
+            </div>
+            <div class="story-box">
+                <h3>Our Vision</h3>
+                <p>To create a healthier and happier community.</p>
+            </div>
         </div>
-    </div>
- </section>
-<!-- =====CHOOSE SECTION START===== -->
- v
-<section class="why-choose" id="whyChoose">
+    </section>
+    <!-- =====CHOOSE SECTION START===== -->
+    v
+    <section class="why-choose" id="whyChoose">
 
-    <div class="section-heading">
-        <span>WHY CHOOSE US</span>
-        <h2>Why Choose Medtik?</h2>
-        <p>We care for your health with trust and dedication.</p>
-    </div>
-
-    <div class="choose-container" id="chooseContainer">
-
-        <div class="choose-card" id="expertDoctors">
-            <div class="choose-icon">✚</div>
-            <h3>Expert Doctors</h3>
-            <p>Get trusted care from experienced medical professionals.</p>
+        <div class="section-heading">
+            <span>WHY CHOOSE US</span>
+            <h2>Why Choose Medtik?</h2>
+            <p>We care for your health with trust and dedication.</p>
         </div>
 
-        <div class="choose-card" id="onlineSupport">
-            <div class="choose-icon">♡</div>
-            <h3>24/7 Support</h3>
-            <p>Our team is available to help you whenever you need.</p>
+        <div class="choose-container" id="chooseContainer">
+
+            <div class="choose-card" id="expertDoctors">
+                <div class="choose-icon">✚</div>
+                <h3>Expert Doctors</h3>
+                <p>Get trusted care from experienced medical professionals.</p>
+            </div>
+
+            <div class="choose-card" id="onlineSupport">
+                <div class="choose-icon">♡</div>
+                <h3>24/7 Support</h3>
+                <p>Our team is available to help you whenever you need.</p>
+            </div>
+
+            <div class="choose-card" id="easyBooking">
+                <div class="choose-icon">✓</div>
+                <h3>Easy Appointment</h3>
+                <p>Book your doctor consultation quickly and easily.</p>
+            </div>
+
         </div>
 
-        <div class="choose-card" id="easyBooking">
-            <div class="choose-icon">✓</div>
-            <h3>Easy Appointment</h3>
-            <p>Book your doctor consultation quickly and easily.</p>
-        </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!-- =====CHOOSE SECTION END===== -->
+    <!-- =====CHOOSE SECTION END===== -->
     <!-- =====FOOTER SECTION START====== -->
     <footer class="footer" id="footer">
         <div class="footer-container" id="footerContainer">
@@ -127,6 +132,8 @@
                 <a href="services.html">Neurology</a>
                 <a href="services.html">Dentistry</a>
                 <a href="services.html">Pediatrics</a>
+                <a href="services.html">Gynecology</a>
+                <a href="services.html">Dermatology</a>
             </div>
             <div class="footer-contact">
                 <h3>Contact Us</h3>
@@ -140,6 +147,16 @@
         </div>
     </footer>
     <!-- =====FOOTER SECTION END====== -->
+
+
+    <!-- ======BACK TO TOP BUTTON START====== -->
+    <button id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- ======BACK TO TOP BUTTON END====== -->
+
+    <!-- =====JAVASCRIPT LINK===== -->
+    <script src="./src/main.js"></script>
 </body>
 
 </html>

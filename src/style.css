@@ -59,7 +59,7 @@ body {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
 }
 
 .nav-links a {
@@ -74,19 +74,46 @@ body {
     color: var(--primary-color);
 }
 
-.nav-btn {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    padding: 13px 22px;
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 10px;
+    white-space: nowrap;
+
+}
+
+.nav-button .login-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 12px 22px;
     border-radius: 8px;
-    text-decoration: none;
-    font-size: 14px;
     font-weight: 600;
     transition: 0.3s;
 }
 
-.nav-btn:hover {
+.nav-links .login-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.nav-button .nav-btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: 2px solid var(--primary-color);
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-button .nav-btn:hover {
     background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--white-color);
 }
 
 .menu-btn {
@@ -97,6 +124,7 @@ body {
     cursor: pointer;
     color: var(--primary-color);
 }
+
 
 /* =====HERO SECTION===== */
 
@@ -446,10 +474,66 @@ body {
 }
 
 .doctor-info a {
-    color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
     font-size: 13px;
+}
+
+.doctor-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.doctor-details p {
+    font-size: 13px;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.doctor-status {
+    background-color: #E2F7EA;
+    color: #16834A;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.doctor-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.view-profile,
+.book-doctor {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid var(--primary-color);
+    transition: 0.3s ease;
+}
+
+.doctor-buttons .book-doctor {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.book-doctor:hover {
+    transform: translateY(-2px);
+    background-color: var(--secondary-color)
+}
+
+.view-profile:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
 }
 
 /* =====TESTIMONIAL SECTION===== */
@@ -496,6 +580,43 @@ body {
 .testimonial-card span {
     color: var(--primary-color);
     font-size: 13px;
+}
+
+/* =====HEALTH TIPS===== */
+.health-tips {
+    text-align: center;
+    padding: 50px 20px;
+    background: var(--card-color);
+    border-radius: 15px;
+    margin: 50px 7%;
+}
+
+.health-tips h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.health-tips p {
+    color: var(--text-color);
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.health-tips button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.health-tips button:hover {
+    background-color: var(--secondary-color);
+
 }
 
 /* =====FOOTER SECTION=====  */
@@ -756,6 +877,46 @@ body {
     margin-bottom: 28px;
 }
 
+.doctor-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin: 35px auto;
+    padding: 0 7%;
+
+}
+
+.doctor-search input,
+.doctor-search select {
+    width: 200px;
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid #D5EAE7;
+    border: 8px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    background-color: #EAF8F7;
+    transition: 0.3s ease;
+}
+
+.doctor-search::placeholder {
+    color: #667C83;
+}
+
+.doctor-search input:focus,
+.doctor-search select:focus {
+    border-color: var(--primary-color);
+    background-color: var(--white-color);
+    box-shadow: 0 0 0 3px rgba(7, 155, 145, 0.12);
+}
+
+.doctor-search select {
+    cursor: pointer;
+}
+
 /* =====DOCTOR SPECIALIST SECTION===== */
 .all-doctors {
     padding: 80px 7%;
@@ -818,6 +979,84 @@ body {
     text-decoration: none;
     font-size: 13px;
     font-weight: 600;
+}
+
+/* =====DOCTOR PROFILE MODAL===== */
+
+.doctor-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(25, 51, 61, 0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.doctor-modal-content {
+    background-color: var(--white-color);
+    width: 100%;
+    max-width: 750px;
+    border-radius: 18px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+.close-modal {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    border: none;
+    background: none;
+    font-size: 30px;
+    color: var(--dark-color);
+    cursor: pointer;
+}
+
+.modal-doctor-image {
+    width: 40%;
+}
+
+.modal-doctor-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.modal-doctor-info {
+    flex: 1;
+}
+
+.modal-doctor-info>span {
+    font-size: 14px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.modal-doctor-info>h2 {
+    margin: 10px 0;
+    color: var(--dark-color);
+}
+
+.modal-doctor-info>p {
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+.modal-details {
+    margin: 20px 0;
+
+}
+
+.modal-details p {
+    margin: 10px 0;
+    color: var(--text-color);
 }
 
 /*===== SERVICE SECTION ===== */
@@ -909,6 +1148,57 @@ body {
 .contact-page .location-box p {
     font-size: 14px;
     color: var(--light-color);
+}
+
+/* =====CONTACT INFO===== */
+.contact-info {
+    width: 100%;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.contact-info h2 {
+    font-size: 28px;
+    color: var(--dark-color);
+    margin-bottom: 25px;
+}
+
+.contact-info-item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    min-height: 170px;
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.contact-info-item:hover {
+    transform: translateY(-5px);
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.contact-info-item i {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.contact-info-item h3 {
+    font-size: 17px;
+    color: var(--dark-color);
+    margin-bottom: 8px;
+}
+
+.contact-info-item p {
+    font-size: 14px;
+    color: var(--text-color);
 }
 
 /* =====CONTACT BUTTON */
@@ -1011,42 +1301,53 @@ body {
     margin: auto;
 }
 
-.contact-page .whatsapp-badge {
-    position: absolute;
-    left: 0;
-    top: -15px;
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    background: #25D366;
-    color: white;
+.contact-page .social-icons .whatsapp-badge {
+    width: 60px;
+    height: 60px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    z-index: 2;
+    align-items: center;
+    background: #25D366;
+    color: var(--white-color);
+    border-radius: 50%;
+    font-size: 34px;
+    flex-shrink: 0;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    transition: 0.3s;
+}
+
+.contact-page .social-icons .whatsapp-badge:hover {
+    transform: scale(1.1);
+    background-color: #25D366;
+    color: var(--white-color);
 }
 
 .contact-page .social-icons {
-    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0 10px 0 75px;
-    gap: 15px;
+    gap: 18px;
 }
 
 .contact-page .social-icons a {
-    color: var(--white-color);
+    width: 45px;
+    height: 45px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    font-size: 20px;
+    border-radius: 25%;
     text-decoration: none;
     transition: 0.3s;
 }
 
 .contact-page .social-icons a:hover {
-    transform: translateY(-4px);
-    color: var(--light-color);
+    transform: translateY(-5px);
+    color: var(--white-color);
+    background-color: var(--primary-color);
+
 }
 
 /* =====APPOINTMENT SECTION===== */
@@ -1160,6 +1461,55 @@ body {
     margin-top: 25px;
 }
 
+/* =====APPOINTMENT CONFIRMATION BOX===== */
+.confirmation-box {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+
+}
+
+.confirmation-content {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.confirmation-content p {
+    margin: 15px 0;
+    color: var(--dark-color);
+}
+
+#closeConfirmation {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    color: var(--white-color);
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
 /* =====LOGIN SECTION====== */
 .login-wrapper {
     display: flex;
@@ -1167,9 +1517,10 @@ body {
     align-items: center;
     min-height: 85vh;
     padding: 50px 20px;
-    background-color: var(--light-color);
+    background: var(--light-color);
     box-sizing: border-box;
 }
+
 .login-card {
     background-color: var(--white-color);
     width: 100%;
@@ -1179,6 +1530,7 @@ body {
     box-shadow: 0 10px 30px rgba(25, 51, 61, 0.10);
     box-sizing: border-box;
 }
+
 .badge {
     display: inline-block;
     background-color: var(--light-color);
@@ -1189,6 +1541,7 @@ body {
     font-weight: 600;
     margin-bottom: 16px;
 }
+
 .login-card h2 {
     font-size: 30px;
     color: var(--dark-color);
@@ -1205,6 +1558,7 @@ body {
     margin-bottom: 28px;
     line-height: 1.7;
 }
+
 .input-group {
     margin-bottom: 20px;
 }
@@ -1230,6 +1584,7 @@ body {
 .input-group input:focus {
     border-color: var(--primary-color);
 }
+
 .form-options {
     display: flex;
     justify-content: space-between;
@@ -1250,6 +1605,7 @@ body {
     align-items: center;
     gap: 6px;
 }
+
 .login-btn {
     width: 100%;
     background-color: var(--primary-color);
@@ -1258,13 +1614,37 @@ body {
     padding: 15px;
     border-radius: 10px;
     font-size: 15px;
-    font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .login-btn:hover {
     background-color: var(--secondary-color);
+}
+
+/* =====BACK TO TOP BUTTON ===== */
+#backToTop {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color: var(--white-color);
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 999;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #087B74;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -1312,6 +1692,30 @@ body {
     .hero-info h3 {
         font-size: 22px;
     }
+
+    .all-doctors-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .doctor-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .doctor-buttons a {
+        width: 100%;
+    }
+
+    .doctor-modal-content {
+        max-width: 700px;
+        gap: 20px;
+        padding: 25px;
+    }
+
+    .modal-doctor-image {
+        width: 300px;
+    }
+
 }
 
 /* =====MOBILE===== */
@@ -1329,7 +1733,7 @@ body {
         display: block;
     }
 
-    .nav-btn {
+    .navbar>.nav-btn {
         display: none;
     }
 
@@ -1351,11 +1755,31 @@ body {
         display: flex;
     }
 
-    .nav-links a {
+    .nav-links>a {
         width: 100%;
         padding: 14px 0;
         border-bottom: 1px solid var(--border-color);
         font-size: 15px;
+    }
+
+    .nav-button {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .nav-button .login-btn,
+    .nav-button .nav-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 12px;
+        text-align: center;
+        margin: 0;
     }
 
     /* =====HERO SECTION===== */
@@ -1474,6 +1898,35 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .doctor-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .doctor-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .doctor-modal-content {
+        max-width: 550px;
+        gap: 15px;
+    }
+
+    .modal-doctor-image {
+        width: 38%;
+    }
+
+    .modal-doctor-image img {
+        height: 260px;
+    }
+
+    .modal-doctor-info h2 {
+        font-size: 21px;
+    }
+
     /* =====SERVICE SECTION===== */
     .services-hero {
         padding: 60px 5%;
@@ -1520,23 +1973,58 @@ body {
         padding: 50px 6%;
     }
 
+    .contact-info h2 {
+        font-size: 24px;
+    }
+
+    .contact-info-item {
+        width: 100%;
+        margin: 10px 0;
+        min-height: 150px;
+    }
+
     .contact-page .newsletter-title {
         font-size: 29px;
     }
-     /* =====APPOINTMENT SECTION===== */
+
+    .contact-page .social-bar-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contact-page .social-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .contact-page .social-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+
+    /* =====APPOINTMENT SECTION===== */
 
     .service-appointment {
         padding: 45px 5%;
     }
+
     .appointment-content {
         padding: 30px 22px;
     }
+
     .appointment-heading h2 {
         font-size: 26px;
     }
+
     .appointment-form {
         grid-template-columns: 1fr;
     }
+
     .full-width,
     .appointment-form .primary-btn {
         grid-column: auto;
@@ -1679,6 +2167,42 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .doctor-modal {
+        padding: 12px;
+    }
+
+    .doctor-modal-content {
+        flex-direction: column;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 35px 18px 20px;
+        gap: 15px;
+    }
+
+    .modal-doctor-image {
+        width: 100%;
+    }
+
+    .modal-doctor-image img {
+        height: 200px;
+    }
+
+    .modal-doctor-info {
+        width: 100%;
+    }
+
+    .modal-doctor-info h2 {
+        font-size: 19px;
+    }
+
+    .modal-doctor-info>p {
+        font-size: 13px;
+    }
+
+    .modal-details p {
+        font-size: 13px;
+    }
+
     /* =====SERVICE SECTION===== */
     .services-hero-content {
         min-width: 0;
@@ -1702,31 +2226,35 @@ body {
         width: 100%;
     }
 
-/* =====CONTACT PAGE===== */
-.contact-page .main-section {
-    padding: 30px 20px;
-    border-radius: 20px;
-}
+    /* =====CONTACT PAGE===== */
+    .contact-page .main-section {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
 
-.contact-page .newsletter-title {
-    font-size: 24px;
-}
+    .contact-page .newsletter-title {
+        font-size: 24px;
+    }
 
-.contact-page .newsletter-desc {
-    font-size: 13px;
-}
+    .contact-page .newsletter-desc {
+        font-size: 13px;
+    }
 
-.contact-page .social-icons {
-    padding-left: 60px;
-    gap: 10px;
-}
+    .contact-page .social-icons {
+        padding-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
 
-.contact-page .whatsapp-badge {
-    width: 46px;
-    height: 46px;
-}
-/* =====APPOINTMENT SECTION===== */
-.appointment-content {
+    .contact-page .whatsapp-badge {
+        width: 46px;
+        height: 46px;
+    }
+
+    /* =====APPOINTMENT SECTION===== */
+    .appointment-content {
         padding: 25px 18px;
         border-radius: 18px;
     }
@@ -1738,6 +2266,7 @@ body {
     .appointment-heading p {
         font-size: 13px;
     }
+
     /* =====LOGIN===== */
     .login-wrapper {
         padding: 35px 15px;
@@ -1750,4 +2279,5 @@ body {
     .login-card h2 {
         font-size: 25px;
     }
+
 }

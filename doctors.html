@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./src/assests/logo.png">
     <title>Our Doctor | Medtik</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="./src/style.css">
 </head>
 
@@ -21,10 +22,12 @@
             <a href="doctors.html" class="navlinks" id="doctorsLink">Doctors</a>
             <a href="services.html" class="navlinks" id="servicesLink">Services</a>
             <a href="contact.html" class="navlinks" id="contactLink">Contact</a>
-            <a href="login.html" class="navlinks" id="loginLink">Login</a>
-
+            <div class="nav-button">
+                <a href="login.html" class="login-btn" id="loginLink">Login</a>
+                <a href="appointment.html" class="nav-btn" id="navappointment">Book Appointment</a>
+            </div>
         </nav>
-        <a href="appointment.html" class="nav-btn" id="navappointment">Book Appointment</a>
+
         <button class="menu-btn" id="menuBtn">
             ☰
         </button>
@@ -55,6 +58,20 @@
             <h2>Meet Our Expert Doctors</h2>
             <p>Choose the right specialist for your healthcare needs.</p>
         </div>
+
+        <div class="doctor-search" id="doctorSearch">
+            <input type="text" id="searchDoctor" placeholder="Search doctor name....">
+            <select id="filterSpecialty">
+                <option value="all">All Specialities</option>
+                <option value="Cardiologist">Cardiologist</option>
+                <option value="Neurologist">Neurologist</option>
+                <option value="Gynecologist">Gynecologist</option>
+                <option value="Dermatologist">Dermatologist</option>
+                <option value="Dentist">Dentist</option>
+                <option value="Pediatrician">Pediatrician</option>
+            </select>
+        </div>
+
         <div class="all-doctors-container" id="allDoctorsContainer">
             <div class="all-doctor-card" id="doctorAyesha">
                 <img src="./src/assests/image-2.jpg" alt="image-2">
@@ -62,7 +79,17 @@
                     <h3>Dr. Ayesha Siddiqui</h3>
                     <span>Cardiologist</span>
                     <p>Heart and cardiovascular specialist.</p>
-                    <a href="appointment.html">Book Appointment →</a>
+
+                    <div class="doctor-details">
+                        <p>Experience: 8 years</p>
+                        <p> ⭐ 4.9 Rating</p>
+                    </div>
+                    <span class="doctor-status">Available</span>
+                    <div class="doctor-buttons">
+                        <a href="#" class="view-profile">View Profile</a>
+                        <a href="appointment.html" class="book-doctor">Book Appointment →</a>
+                    </div>
+
                 </div>
             </div>
             <div class="all-doctor-card" id="doctorAhmed">
@@ -71,19 +98,146 @@
                     <h3>Dr. Ahmed Khan</h3>
                     <span>Neurologist</span>
                     <p>Brain and nervous system specialist.</p>
-                    <a href="appointment.html">Book Appointment →</a>
+                    <div class="doctor-details">
+                        <p>Experience: 10 years</p>
+                        <p> ⭐ 4.8 Rating</p>
+                    </div>
+                    <span class="doctor-status">Available</span>
+                    <div class="doctor-buttons">
+                        <a href="#" class="view-profile">View Profile</a>
+                        <a href="appointment.html" class="book-doctor">Book Appointment →</a>
+                    </div>
                 </div>
             </div>
-            <div class="all-doctor-card" id="doctorAyesha">
+            <div class="all-doctor-card" id="doctorFatima">
                 <img src="./src/assests/image-4.jpg" alt="image-4">
                 <div class="all-doctor-info">
                     <h3>Dr. Fatima Noor</h3>
-                    <span>Peditrication</span>
+                    <span>Pediatrician</span>
                     <p>Healthcare specialist for children.</p>
-                    <a href="appointment.html">Book Appointment →</a>
+                    <div class="doctor-details">
+                        <p>Experience: 7 years</p>
+                        <p> ⭐ 4.9 Rating</p>
+                    </div>
+                    <span class="doctor-status">Available</span>
+                    <div class="doctor-buttons">
+                        <a href="#" class="view-profile">View Profile</a>
+                        <a href="appointment.html" class="book-doctor">Book Appointment →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="all-doctor-card" id="doctorSara">
+                <img src="./src/assests/image-7.png" alt="image-7">
+                <div class="all-doctor-info">
+                    <h3>Dr. Sara Ahmed</h3>
+                    <span>Gynecologist</span>
+                    <p>Specialist in women's health and reproductive care.</p>
+                    <div class="doctor-details">
+                        <p>Experience: 9 years</p>
+                        <p> ⭐ 4.9 Rating</p>
+                    </div>
+                    <span class="doctor-status">Available</span>
+                    <div class="doctor-buttons">
+                        <a href="#" class="view-profile">View Profile</a>
+                        <a href="appointment.html" class="book-doctor">Book Appointment →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="all-doctor-card" id="doctorUsman">
+                <img src="./src/assests/image-8.png" alt="image-8">
+                <div class="all-doctor-info">
+                    <h3>Dr. Usman Malik</h3>
+                    <span>Dermatologist</span>
+                    <p>Expert in skin, hair and nail care.</p>
+                    <div class="doctor-details">
+                        <p>Experience: 6 years</p>
+                        <p> ⭐ 4.7 Rating</p>
+                    </div>
+                    <span class="doctor-status">Available</span>
+                    <div class="doctor-buttons">
+                        <a href="#" class="view-profile">View Profile</a>
+                        <a href="appointment.html" class="book-doctor">Book Appointment →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="all-doctor-card" id="doctorBilal">
+                <img src="./src/assests/image-9.png" alt="image-9">
+                <div class="all-doctor-info">
+                    <h3>Dr. Bilal Hassan</h3>
+                    <span>Dentist</span>
+                    <p>Specialist in dental care and oral health treatments.</p>
+                    <div class="doctor-details">
+                        <p>Experience: 8 years</p>
+                        <p>⭐ 4.8 Rating</p>
+                    </div>
+                    <span class="doctor-status">Available</span>
+                    <div class="doctor-buttons">
+                        <a href="#" class="view-profile">View Profile</a>
+                        <a href="appointment.html" class="book-doctor">
+                            Book Appointment →
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>
+
+        <!-- ======DOCTOR PROFILE MODEL===== -->
+
+
+        <!-- ===== DOCTOR PROFILE MODAL START ===== -->
+
+        <div class="doctor-modal" id="doctorModal">
+
+            <div class="doctor-modal-content">
+
+                <button class="close-modal" id="closeModal">
+                    &times;
+                </button>
+
+                <div class="modal-doctor-image">
+                    <img src="./src/assests/image-2.jpg" alt="Dr. Ayesha Siddiqui">
+                </div>
+
+                <div class="modal-doctor-info">
+
+                    <span>Cardiology Specialist</span>
+
+                    <h2>Dr. Ayesha Siddiqui</h2>
+
+                    <p>
+                        Experienced cardiologist dedicated to providing
+                        quality heart care and treatment.
+                    </p>
+
+                    <div class="modal-details">
+
+                        <p><strong>Qualification:</strong> MBBS, FCPS</p>
+
+                        <p><strong>Experience:</strong> 8 Years</p>
+
+                        <p><strong>Specialization:</strong> Cardiology</p>
+
+                        <p><strong>Rating:</strong> ⭐ 4.9</p>
+
+                        <p><strong>Availability:</strong> Available</p>
+
+                    </div>
+
+                    <a href="appointment.html" class="primary-btn">
+                        Book Appointment →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ===== DOCTOR PROFILE MODAL END ===== -->
     </section>
     <!-- DOCTOR SPECIALLIST SECTION END -->
 
@@ -108,6 +262,8 @@
                 <a href="services.html">Neurology</a>
                 <a href="services.html">Dentistry</a>
                 <a href="services.html">Pediatrics</a>
+                <a href="services.html">Gynecology</a>
+                <a href="services.html">Dermatology</a>
             </div>
             <div class="footer-contact">
                 <h3>Contact Us</h3>
@@ -121,5 +277,15 @@
         </div>
     </footer>
     <!-- =====FOOTER SECTION END====== -->
+
+
+    <!-- ======BACK TO TOP BUTTON START====== -->
+    <button id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- ======BACK TO TOP BUTTON END====== -->
+    <!-- =====JAVASCRIPT LINK===== -->
+    <script src="./src/main.js"></script>
 </body>
+
 </html>
