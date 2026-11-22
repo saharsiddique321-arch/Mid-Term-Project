@@ -48,7 +48,7 @@
                 and manage appointments.
             </p>
 
-            <form action="#" method="POST" id="loginForm">
+            <form action="#" method="POST" id="loginForm" novalidate>
 
                 <div class="input-group">
                     <label for="email">Email Address</label>
@@ -76,10 +76,32 @@
                 </button>
 
             </form>
-
+            <p id="loginMessage"></p>
         </div>
 
     </section>
+
+    <!-- ===== LOGIN POPUP ===== -->
+
+<div class="popup" id="loginPopup">
+
+    <div class="popup-content">
+
+        <div class="popup-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+        <h2 id="loginPopupTitle">Thank You!</h2>
+
+        <p id="loginPopupMessage"></p>
+
+        <button type="button" id="closeLoginPopup">
+            OK
+        </button>
+
+    </div>
+
+</div>
     <!-- LOGIN SECTION END -->
     <!-- =====FOOTER SECTION START====== -->
     <footer class="footer" id="footer">

@@ -1240,6 +1240,81 @@ body {
     margin-bottom: 25px;
 }
 
+/* =====SUBSCRIBE POPUP===== */
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.popup-content {
+    background: var(--white-color);
+    padding: 35px;
+    width: 380px;
+    max-width: 90%;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    animation: popupShow 0.3s ease;
+}
+
+.popup-icon {
+    width: 65px;
+    height: 65px;
+    background: var(--light-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    margin: 0 auto 20px;
+}
+
+.popup-content h2 {
+    color: var(--dark-color);
+    margin-bottom: 12px;
+}
+
+.popup-content p {
+    color: var(--text-color);
+    margin-bottom: 25px;
+}
+
+.popup-content button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.popup-content button:hover {
+    background: var(--secondary-color);
+}
+
+@keyframes popupShow {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /* =====FORM===== */
 .contact-page .newsletter-form {
     display: flex;
@@ -1620,6 +1695,21 @@ body {
 
 .login-btn:hover {
     background-color: var(--secondary-color);
+}
+
+/* ===== LOGIN POPUP ===== */
+
+#loginPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
 }
 
 /* =====BACK TO TOP BUTTON ===== */

@@ -51,11 +51,11 @@
                 </div>
                 <div class="form-group">
                     <label for="patientPhone">Phone Number</label>
-                    <input type="number" id="patientPhone" placeholder="Enter Your Phone Number" required>
+                    <input type="number" id="patientPhone" placeholder="Enter Your Phone Number" maxlength="11" required>
                 </div>
                 <div class="form-group">
                     <label for="selectDoctor">Select Doctor</label>
-                    <select id="selectDoctor">
+                    <select id="selectDoctor" required>
                         <option value="">Choose Doctor</option>
                         <option>Dr. Ayesha Siddiqui</option>
                         <option>Dr. Ahmed Khan</option>
@@ -88,7 +88,7 @@
                 </div>
                 <div class="form-group full-width">
                     <label for="healthProblem">Message/ Health Problem</label>
-                    <textarea id="healthProblem" placeholder="Tell Us About your Health Problem..." rows="4"></textarea>
+                    <textarea id="healthProblem" placeholder="Tell Us About your Health Problem..." rows="4" required></textarea>
                 </div>
                 <button type="submit" class="primary-btn" id="BookAppointmentBtn">Book Appointment →</button>
             </form>
